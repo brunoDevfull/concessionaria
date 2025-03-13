@@ -1,4 +1,4 @@
--- Inserir dados na tabela marcas
+-- Inseririndo dados na tabela marcas
 INSERT INTO marcas (nome) VALUES 
 ('Toyota'),
 ('Ford'),
@@ -11,28 +11,28 @@ INSERT INTO marcas (nome) VALUES
 ('Nissan'),
 ('Hyundai');
 
--- Inserir dados na tabela pessoa
-INSERT INTO pessoa (nome, idade, cnh) VALUES 
-('João Silva', 30, '123456789'),
-('Maria Oliveira', 25, '987654321'),
-('Carlos Souza', 40, '456789123'),
-('Ana Costa', 22, '321654987'),
-('Pedro Rocha', 35, '654321987'),
-('Lucia Lima', 28, '789123456'),
-('Fernando Santos', 33, '321987654'),
-('Juliana Pereira', 29, '654987321'),
-('Roberto Alves', 45, '987321654'),
-('Camila Ribeiro', 27, '123987456');
+-- Inseririndo dados na tabela carros
+INSERT INTO carros (placa, modelo, ano, marca_id) VALUES 
+('1234cv7','Corolla', 1, 1),
+('123fb46','Mustang', 2,2),
+('564ts98','Camaro', 3,3),
+('12ad22y','Civic', 4,4),
+('479qw37','Golf', 5,5),
+('as2135u','X5', 6,6),
+('yt548qw','C-Class', 7,7),
+('231kj3w','A4', 8,8),
+('26bv100','Altima', 9,9),
+('382ee5t','Tucson', 10,10);
 
--- Inserir dados na tabela carro
-INSERT INTO carro (modelo, marca_id, motorista_id) VALUES 
-('Corolla', 1, 1),
-('Mustang', 2, 2),
-('Camaro', 3, 3),
-('Civic', 4, 4),
-('Golf', 5, 5),
-('X5', 6, 6),
-('C-Class', 7, 7),
-('A4', 8, 8),
-('Altima', 9, 9),
-('Tucson', 10, 10);
+-- Inseririndo dados na tabela pessoas
+INSERT INTO pessoas (nome, cpf, data_nascimento) VALUES 
+('João Silva', 11111111111, '2007/02/03'),
+('Maria Oliveira', 22222222222, '2007/02/03'),
+('Carlos Souza', 33333333333, '2007/02/03'),
+('Ana Costa', 44444444444, '2007/02/03'),
+('Pedro Rocha', 5555555555, '2007/02/03'),
+('Lucia Lima', 66666666666, '2007/02/03'),
+('Fernando Santos', 77777777777, '2007/02/03'),
+('Juliana Pereira', 88888888888, '2007/02/03'),
+('Roberto Alves', 99999999999, '2007/02/03'),
+('Camila Ribeiro', 12345678900, '2007/02/03');

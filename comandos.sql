@@ -1,31 +1,32 @@
--- Visualizar todas as marcas
+-- Selecionar todos os registros da tabela marcas
 SELECT * FROM marcas;
 
--- Visualizar todas as pessoas
-SELECT * FROM pessoa;
+-- Selecionar todos os registros da tabela carros
+SELECT * FROM carros;
 
--- Visualizar todos os carros com informações de marca e motorista
-SELECT c.id, c.modelo, m.nome AS marca, p.nome AS motorista
-FROM carro c
-JOIN marcas m ON c.marca_id = m.id
-JOIN pessoa p ON c.motorista_id = p.id;
+-- Selecionar todos os registros da tabela pessoas
+SELECT * FROM pessoas;
 
-----------------------------------------------------------------------------------
--- Atualizar o nome de uma marca
-UPDATE marcas SET nome = 'Fiat' WHERE id = 1;
+-- Selecionar todos os registros da tabela carros_pessoas
+SELECT * FROM carros_pessoas;
 
--- Atualizar a idade de uma pessoa
-UPDATE pessoa SET idade = 31 WHERE id = 1;
+-- Lista todas as placas e anos dos carros cadastrados
+SELECT placa, ano FROM carros;
 
--- Atualizar o modelo de um carro
-UPDATE carro SET modelo = 'Corolla XEi' WHERE id = 1;
+-- Mostre o nome e a data de nascimento de todas as pessoas
+SELECT nome, data_nascimento FROM pessoas;
 
-----------------------------------------------------------------------------------
--- Excluir uma marca
-DELETE FROM marcas WHERE id = 10;
+-- Liste todos os carros do ano 2020 ou mais recentes
+SELECT * FROM carros WHERE ano >= 2020;
 
--- Excluir uma pessoa
-DELETE FROM pessoa WHERE id = 10;
+-- Encontre todas as pessoas nascidas antes do ano 2000
+SELECT * FROM pessoas WHERE YEAR(data_nascimento) < 2000;
 
--- Excluir um carro
-DELETE FROM carro WHERE id = 10;
+-- Selecione os carros de uma marca específica (exemplo: "Toyota")
+SELECT carros.placa, carros.modelo, carros.ano 
+FROM carros
+JOIN marcas ON carros.marca_id = marcas.id
+WHERE marcas.nome = 'Toyota';
+
+-- Exiba todas as pessoas cujo nome comece com a letra "A"
+SELECT * FROM pessoas WHERE nome LIKE 'A%';
